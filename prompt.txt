@@ -1,0 +1,67 @@
+Create an Arabic elementary math game which have the following games each one of which should be either multiple choice questions or written depending on the user's choice:
+
+- Addition Game: Generate two random numbers and ask the user to find the sum of them. It has four levels of difficulty:
+  - Low: The numbers should be in 0-9
+  - Medium: The numbers should be in 10-99
+  - High: The numbers should be in 100-999
+  - Custom: Input from the user the range of numbers
+
+- Subtraction Game: Generate two random numbers and ask the user to subtract them (Prevent subtracting a large number from a small number to avoid negative results, since elementary students do not know about them). It has four levels of difficulty:
+  - Low: The numbers should be in 0-9
+  - Medium: The numbers should be in 10-99
+  - High: The numbers should be in 100-999
+  - Custom: Input from the user the range of numbers
+
+- Addition&Subtraction Together: Randomly generate addition or subtraction questions. It has four levels of difficulty:
+  - Low: The numbers should be in 0-9
+  - Medium: The numbers should be in 10-99
+  - High: The numbers should be in 100-999
+  - Custom: Input from the user the range of numbers for Addition and Subtraction individually.
+
+
+- Multiplication Game: Generate two random numbers and ask the user to find the product of them. It has four levels of difficulty:
+  - Low: The numbers should be in 0-10
+  - Medium: The numbers should be in 10-99
+  - High: The numbers should be in 100-999
+  - Custom: Input from the user the range of numbers
+
+- Division Game: Generate two random numbers and ask the user to divide them (Prevent non-integer results, for example, 5/2). It has four levels of difficulty:
+  - Low: The numbers should be in 0-100
+  - Medium: The numbers should be in 100-10000
+  - High: The numbers should be in 10000-1000000
+  - Custom: Input from the user the range of numbers
+
+- Multiplication&Division Together: Randomly generate multiplication or division questions. It has four levels of difficulty:
+  - Low: Low for multiplication and low for division (defined above)
+  - Medium: Medium for multiplication and medium for division (defined above)
+  - High: High for multiplication and high for division (defined above)
+  - Custom: Input from the user the range of numbers for multiplication and division individually.
+
+- Arithmatic Game: Combines Addition,Subtraction,Division, and Multiplication.
+  - Low: Low for each Arithmatic operations
+  - Medium: Medium for each Arithmatic operations
+  - High: High for each Arithmatic operations
+  - Custom: Custom for each Arithmatic operations
+
+- Reading Numbers: Displays a random number and let the user to type the number in arabic (You can use a dictionary for checking the answer, use simialarity checking if the answer is typed):
+ - Low: The number should be in 0-99
+ - Medium: The number should be in 100-999
+ - High: The number should be in 1000-9999
+ - Custom: Custom range from the user
+
+- Comparing numbers: Displays two random numbers and let the user compare them:
+  - Low: The numbers should be in 0-9
+  - Medium: The numbers should be in 10-99
+  - High: The numbers should be in 100-999
+  - Custom: Input from the user the range of numbers for Addition and Subtraction individually.
+
+- Fractions: Displays a random fraction and the user fill the pizza with the correct matching if the choice is typed not multiple choice, ensure that the pizza portion that should be draged is generated based on the generated fraction
+ - Deafult: The denominator should be 2-9 and the nominator is 3-8
+ - Custom: Custom ranges from the user.
+
+Please use config file for these ranges, difficulties, etc... and any other set up for ease of modification.
+
+The project folder is mathemantery which is a vite REACT-TS project. Use tailwindCSS for styling and put the styles in a seperate json file. 
+Note that the numbers should be Arabic or English numbers based on the user choice. However the questions should be in Arabic.
+
+Do you have any other question before generating?
