@@ -126,22 +126,22 @@ export function GameSettings({ gameType, onStart, onBack }: GameSettingsProps) {
   };
 
   return (
-    <div className="w-full max-w-md px-4 sm:px-0">
-      <div className={styles.containers.card}>
-        <h2 className="text-xl sm:text-2xl font-bold text-center text-indigo-700 mb-4 sm:mb-6">
+    <div className="w-[90%] max-w-sm">
+      <div className={`${styles.containers.card} py-8 sm:py-10 md:py-12 px-6 sm:px-8`}>
+        <h2 className="text-xl sm:text-2xl font-bold text-center text-indigo-700 mb-6 sm:mb-8">
           {gameName}
         </h2>
 
-        <div className="space-y-4 sm:space-y-6">
+        <div className="space-y-6 sm:space-y-8">
           {/* Difficulty */}
           <div className={styles.settings.container}>
             <label className={styles.settings.label}>مستوى الصعوبة</label>
-            <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
               {difficulties.map((d) => (
                 <button
                   key={d}
                   onClick={() => setDifficulty(d)}
-                  className={`px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl font-medium transition-all text-sm sm:text-base ${
+                  className={`px-3 sm:px-4 py-3 sm:py-4 rounded-lg sm:rounded-xl font-medium transition-all text-sm sm:text-base ${
                     difficulty === d
                       ? 'bg-indigo-500 text-white shadow-md'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -158,10 +158,10 @@ export function GameSettings({ gameType, onStart, onBack }: GameSettingsProps) {
           {supportsMultipleChoice && (
             <div className={styles.settings.container}>
               <label className={styles.settings.label}>نوع الأسئلة</label>
-              <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 <button
                   onClick={() => setQuestionMode('multipleChoice')}
-                  className={`px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl font-medium transition-all text-sm sm:text-base ${
+                  className={`px-3 sm:px-4 py-3 sm:py-4 rounded-lg sm:rounded-xl font-medium transition-all text-sm sm:text-base ${
                     questionMode === 'multipleChoice'
                       ? 'bg-indigo-500 text-white shadow-md'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -171,7 +171,7 @@ export function GameSettings({ gameType, onStart, onBack }: GameSettingsProps) {
                 </button>
                 <button
                   onClick={() => setQuestionMode('written')}
-                  className={`px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl font-medium transition-all text-sm sm:text-base ${
+                  className={`px-3 sm:px-4 py-3 sm:py-4 rounded-lg sm:rounded-xl font-medium transition-all text-sm sm:text-base ${
                     questionMode === 'written'
                       ? 'bg-indigo-500 text-white shadow-md'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -186,10 +186,10 @@ export function GameSettings({ gameType, onStart, onBack }: GameSettingsProps) {
           {/* Number Format */}
           <div className={styles.settings.container}>
             <label className={styles.settings.label}>شكل الأرقام</label>
-            <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
+            <div className="grid grid-cols-2 gap-2 sm:gap-3">
               <button
                 onClick={() => setNumberFormat('arabic')}
-                className={`px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl font-medium transition-all text-sm sm:text-base ${
+                className={`px-3 sm:px-4 py-3 sm:py-4 rounded-lg sm:rounded-xl font-medium transition-all text-sm sm:text-base ${
                   numberFormat === 'arabic'
                     ? 'bg-indigo-500 text-white shadow-md'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -199,7 +199,7 @@ export function GameSettings({ gameType, onStart, onBack }: GameSettingsProps) {
               </button>
               <button
                 onClick={() => setNumberFormat('english')}
-                className={`px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl font-medium transition-all text-sm sm:text-base ${
+                className={`px-3 sm:px-4 py-3 sm:py-4 rounded-lg sm:rounded-xl font-medium transition-all text-sm sm:text-base ${
                   numberFormat === 'english'
                     ? 'bg-indigo-500 text-white shadow-md'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -211,7 +211,7 @@ export function GameSettings({ gameType, onStart, onBack }: GameSettingsProps) {
           </div>
 
           {/* Timer */}
-          <div className={styles.settings.row}>
+          <div className="flex items-center justify-between py-3 sm:py-4 px-4 bg-gray-50 rounded-xl">
             <label className={styles.settings.label}>
               {gameConfig.labels.timer.enabled}
             </label>
@@ -223,16 +223,16 @@ export function GameSettings({ gameType, onStart, onBack }: GameSettingsProps) {
             <label className={styles.settings.label}>
               {gameConfig.labels.questionsCount.label}
             </label>
-            <div className="flex items-center gap-3 sm:gap-4">
+            <div className="flex items-center gap-3 sm:gap-4 py-2">
               <input
                 type="range"
                 min={5}
                 max={30}
                 value={questionsCount}
                 onChange={(e) => setQuestionsCount(parseInt(e.target.value))}
-                className="flex-1 h-2 bg-gray-200 rounded-lg appearance cursor-pointer accent-indigo-500"
+                className="flex-1 h-3 bg-gray-200 rounded-lg appearance cursor-pointer accent-indigo-500"
               />
-              <span className="text-base sm:text-lg font-bold text-indigo-600 min-w-[2.5rem] sm:min-w-[3rem] text-center">
+              <span className="text-lg sm:text-xl font-bold text-indigo-600 min-w-[3rem] sm:min-w-[3.5rem] text-center">
                 {questionsCount}
               </span>
             </div>
@@ -240,7 +240,7 @@ export function GameSettings({ gameType, onStart, onBack }: GameSettingsProps) {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col gap-2 sm:gap-3 mt-6 sm:mt-8">
+        <div className="flex flex-col gap-3 sm:gap-4 mt-8 sm:mt-10">
           <Button onClick={handleStart}>{gameConfig.labels.buttons.start}</Button>
           <Button variant="secondary" onClick={onBack}>
             {gameConfig.labels.buttons.back}

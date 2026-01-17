@@ -109,11 +109,14 @@ function App() {
 
       case 'settings':
         return selectedGameType ? (
+          <>
+          <Header />
           <GameSettingsComponent
             gameType={selectedGameType}
             onStart={handleStartGame}
             onBack={handleBackFromSettings}
           />
+          </>
         ) : null;
 
       case 'game':
@@ -160,9 +163,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 
-    px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-10 md:py-12">
-      <div className="mx-auto flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100">
+      <div className="mx-auto flex flex-col items-center gap-20 sm:gap-8 md:gap-10">
         {renderScreen()}
       </div>
     </div>

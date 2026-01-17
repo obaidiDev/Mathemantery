@@ -143,7 +143,7 @@ export function GameScreen({
   };
 
   return (
-    <div className="w-full max-w-2xl px-4 sm:px-0">
+    <div className="w-[90%] max-w-2xl">
       <Header
         showBackButton
         onBack={onBack}
@@ -151,7 +151,7 @@ export function GameScreen({
       />
 
       {/* Top bar with score and timer */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-8 sm:mb-10">
         <ScoreDisplay score={score} numberFormat={numberFormat} />
         {timerEnabled && (
           <Timer
@@ -171,7 +171,7 @@ export function GameScreen({
       />
 
       {/* Game content */}
-      <div className={`${styles.containers.card} mt-6`}>
+      <div className={`${styles.containers.card} mt-8 sm:mt-10 py-8 sm:py-10 md:py-12`}>
         <div className={styles.containers.gameArea}>{renderGame()}</div>
       </div>
 
