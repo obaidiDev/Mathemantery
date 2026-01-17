@@ -143,7 +143,7 @@ export function GameScreen({
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-4 sm:px-0">
+    <div className="w-full max-w-2xl px-4 sm:px-0">
       <Header
         showBackButton
         onBack={onBack}

@@ -126,7 +126,7 @@ export function GameSettings({ gameType, onStart, onBack }: GameSettingsProps) {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto px-4 sm:px-0">
+    <div className="w-full max-w-md px-4 sm:px-0">
       <div className={styles.containers.card}>
         <h2 className="text-xl sm:text-2xl font-bold text-center text-indigo-700 mb-4 sm:mb-6">
           {gameName}

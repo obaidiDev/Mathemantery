@@ -34,8 +34,8 @@ const gameEmojis: Record<GameType, string> = {
 
 export function GameSelector({ onSelectGame }: GameSelectorProps) {
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      <h2 className="text-2xl font-bold text-center text-gray-700 mb-8">
+    <div className="w-full max-w-4xl">
+      <h2 className="text-xl sm:text-2xl font-bold text-center text-gray-700 mb-6 sm:mb-8">
         اختر اللعبة
       </h2>
 

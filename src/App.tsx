@@ -160,8 +160,11 @@ function App() {
   };
 
   return (
-    <div className={styles.containers.main}>
-      <div className="max-w-5xl mx-auto">{renderScreen()}</div>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 
+    px-6 sm:px-8 md:px-12 lg:px-16 py-8 sm:py-10 md:py-12">
+      <div className="mx-auto flex flex-col items-center">
+        {renderScreen()}
+      </div>
     </div>
   );
 }

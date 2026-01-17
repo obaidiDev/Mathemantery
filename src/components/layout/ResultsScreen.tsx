@@ -77,7 +77,7 @@ export function ResultsScreen({
   ];
 
   return (
-    <div className="w-full max-w-md mx-auto px-4 sm:px-0">
+    <div className="w-full max-w-md px-4 sm:px-0">
       <div className={`${styles.results.container} animate-slide-up`}>
         {/* Trophy/Result emoji */}
         <div className="text-6xl animate-bounce-in">{getResultEmoji()}</div>
