@@ -8,7 +8,7 @@ import {
   GameScreen,
   ResultsScreen,
 } from './components/layout';
-import styles from './config/styles.json';
+//import styles from './config/styles.json';
 
 type AppScreen = 'home' | 'settings' | 'game' | 'results';
 
